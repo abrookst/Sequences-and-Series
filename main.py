@@ -39,14 +39,13 @@ while looping:
         while count < numTerms:
             if count < 3:
                 print(1)
-                count += 1
             else:
                 next = prevPrev + prev
                 prevPrev = prev
                 prev = current
                 current = next
                 print(next)
-                count += 1
+            count += 1
     elif chosenSequence == 2:
         while count < numTerms:
             print(int((math.factorial(count*2))/(math.factorial(count+1)*math.factorial(count))))
@@ -54,7 +53,6 @@ while looping:
     elif chosenSequence == 3:
         prev1,prev2,prev3,temp = 2,0,3,0
         while count < numTerms:
-            #P(0) = 3, P(1) = 0, P(2) = 2.
             if count == 0:
                 print(3)
             elif count == 1:
