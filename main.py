@@ -20,7 +20,7 @@ while looping:
     elif chosenSequence == 2:
         print("The Catalan Numbers is a sequence named after Eugene Charles Catalan. It is a series of integers defined by the formula (2n)!/((n+1)!*n!), which is equivalent to the product summation (capital pi) of n+k/k from k=2 to n. It has many applications in combinatorics.")
     elif chosenSequence == 3:
-        print("Perrin Explanation")
+        print("The Perrin Numbers is a sequence named after François Olivier Raoul Perrin. It is often shown as a spiral of equilateral triangles and is defined by the recursive formula P(n) = P(n − 2) + P(n − 3) for n > 2 with the initial values of P(0) = 3, P(1) = 0, P(2) = 2.")
     else:
         print("Fermat Explanation")
 
@@ -52,7 +52,22 @@ while looping:
             print(int((math.factorial(count*2))/(math.factorial(count+1)*math.factorial(count))))
             count += 1
     elif chosenSequence == 3:
-        print("Perrin Calculation")
+        prev1,prev2,prev3,temp = 2,0,3,0
+        while count < numTerms:
+            #P(0) = 3, P(1) = 0, P(2) = 2.
+            if count == 0:
+                print(3)
+            elif count == 1:
+                print(0)
+            elif count == 3:
+                print(2)
+            else:
+                temp=prev2+prev3
+                print(temp)
+                prev3=prev2
+                prev2=prev1
+                prev1=temp
+            count += 1
     else:
         print("Fermat Calculation")
     print("Would you like to calculate some more? Y/N")
