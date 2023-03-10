@@ -57,7 +57,7 @@ while looping:
                 print(3)
             elif count == 1:
                 print(0)
-            elif count == 3:
+            elif count == 2:
                 print(2)
             else:
                 temp=prev2+prev3
