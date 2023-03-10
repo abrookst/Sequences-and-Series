@@ -22,7 +22,7 @@ while looping:
     elif chosenSequence == 3:
         print("The Perrin Numbers is a sequence named after François Olivier Raoul Perrin. It is often shown as a spiral of equilateral triangles and is defined by the recursive formula P(n) = P(n − 2) + P(n − 3) for n > 2 with the initial values of P(0) = 3, P(1) = 0, P(2) = 2.")
     else:
-        print("Fermat Explanation")
+        print("The Fermat Sequence is a sequence of positive integers after Pierre de Fermat. Each individual number can be defined by 2^2^n + 1, but the sequence can be recursively defined in various ways as well. These get large very quickly.")
 
     #Choosing the number of terms
     numTerms = 0
@@ -67,7 +67,10 @@ while looping:
                 prev1=temp
             count += 1
     else:
-        print("Fermat Calculation")
+        while count < numTerms:
+            fermat = pow(2,pow(2,count)) + 1
+            print(fermat)
+            count += 1
     print("Would you like to calculate some more? Y/N")
     choice = input(">")
     if choice == "Y":
