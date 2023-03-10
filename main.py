@@ -73,9 +73,9 @@ while looping:
             count += 1
     print("Would you like to calculate some more? Y/N")
     choice = input(">")
-    if choice == "Y":
+    if choice == "Y" or choice == "y":
         print("Sounds good!")
-    elif choice == "N":
+    elif choice == "N" or choice == "n":
         print("Thank you for calculating with us!")
         looping = False
     else:
